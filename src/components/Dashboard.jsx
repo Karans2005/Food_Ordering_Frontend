@@ -4,7 +4,7 @@ export default function Dashboard() {
   const [data, setData] = useState([])
 
   // fetch('http://localhost:3500/listData').then(res => res.json).then(val => setData(val.findRes))
-  fetch('http://localhost:3500/listData').then(res => res.json()).then(val => setData(val.findData))
+  fetch('https://food-ordering-3fbd.onrender.com/listData').then(res => res.json()).then(val => setData(val.findData))
 
 
 

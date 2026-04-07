@@ -19,7 +19,7 @@ const Reservation = () => {
     e.preventDefault();
     
      try{
-      const res = await fetch('http://localhost:3500/data',
+      const res = await fetch('https://food-ordering-3fbd.onrender.com/data',
         {
           method:"POST",
           headers:{ "Content-Type": "application/json"},

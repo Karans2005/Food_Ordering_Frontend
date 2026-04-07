@@ -15,7 +15,7 @@ function Admin() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:3500/listData')
+    fetch('https://food-ordering-3fbd.onrender.com/listData')
       .then(res => res.json())
       .then(val => {
         if (val.findData) {
@@ -27,7 +27,7 @@ function Admin() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3500/deleteData/${id}`, {
+      const res = await fetch(`https://food-ordering-3fbd.onrender.com/deleteData/${id}`, {
         method: "DELETE",
       });
       const result = await res.json();
@@ -59,7 +59,7 @@ function Admin() {
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:3500/updateData/${editingUser._id}`, {
+      const res = await fetch(`https://food-ordering-3fbd.onrender.com/updateData/${editingUser._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
